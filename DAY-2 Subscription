@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    int X;
+    int subscriptionsNeeded;
+    int totalCost;
+
+    printf("Enter the number of friends (N): ");
+    scanf("%d", &N);
+    printf("Enter the cost of one subscription (X): ");
+    scanf("%d", &X);
+
+    subscriptionsNeeded = N/ 6;
+    totalCost = subscriptionsNeeded * X;
+    
+    printf("The minimum total cost for the subscriptions is: %d rupees\n", totalCost);
+
+    return 0;
+}\
