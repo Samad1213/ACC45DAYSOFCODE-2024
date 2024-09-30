@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int X, Y;
+    
+    printf("Enter working hours from Monday to Thursday (X): ");
+    scanf("%d", &X);
+    printf("Enter working hours on Friday (Y): ");
+    scanf("%d", &Y);
+    
+    int totalHours = (X * 4) + Y; 
+    
+    printf("Total working hours in a week: %d\n", totalHours);
+    
+    return 0;
+}
