@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+   
+    int A, B, C, X;
+
+    printf("Enter the topics Chef has prepared for (A, B, C): ");
+    scanf("%d %d %d", &A, &B, &C);
+    
+    printf("Enter the topic Chef gets on contest day (X): ");
+    scanf("%d", &X);
+
+    if (X == A || X == B || X == C) {
+        printf("Yes\n"); // Chef has a chance of winning
+    } else {
+        printf("No\n");  // Chef has no chance of winning
+    }
+
+    return 0;
+}
