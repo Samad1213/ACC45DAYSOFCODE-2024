@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    float P, Q, R, S;
+
+    printf("Enter the profit of Company A (in lakh rupees): ");
+    scanf("%f", &P);
+    printf("Enter the profit of Company B (in lakh rupees): ");
+    scanf("%f", &Q);
+    printf("Enter the profit of Company C (in lakh rupees): ");
+    scanf("%f", &R);
+    printf("Enter the profit of Company D (in lakh rupees): ");
+    scanf("%f", &S);
+
+    if (P > (Q + R + S)) {
+        printf("Company A has a monopoly in the market.\n");
+    } else if (Q > (P + R + S)) {
+        printf("Company B has a monopoly in the market.\n");
+    } else if (R > (P + Q + S)) {
+        printf("Company C has a monopoly in the market.\n");
+    } else if (S > (P + Q + R)) {
+        printf("Company D has a monopoly in the market.\n");
+    } else {
+        printf("There is no monopoly in the market.\n");
+    }
+
+    return 0;
+}
