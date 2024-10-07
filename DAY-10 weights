@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int W;
+    int X, Y, Z; 
+
+    printf("Enter the weight of the object (W): ");
+    scanf("%d", &W);
+    printf("Enter the weights X, Y, Z: ");
+    scanf("%d %d %d", &X, &Y, &Z);
+
+    if (W == X || W == Y || W == Z) {
+        printf("YES\n");
+        return 0;
+    }
+
+    if (W == X + Y || W == X + Z || W == Y + Z) {
+        printf("YES\n");
+        return 0;
+    }
+
+    if (W == X + Y + Z) {
+        printf("YES\n");
+        return 0;
+    }
+
+    printf("NO\n");
+    return 0;
+}
