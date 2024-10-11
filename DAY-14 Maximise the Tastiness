@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c, d;
+    
+    printf("Enter tastiness values for A, B, C, D: ");
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+  
+    int max_tastiness = 0;
+
+    // A + C
+    int tastiness1 = a + c;
+    // A + D
+    int tastiness2 = a + d;
+    // B + C
+    int tastiness3 = b + c;
+    // B + D
+    int tastiness4 = b + d;
+
+    if (tastiness1 > max_tastiness) max_tastiness = tastiness1;
+    if (tastiness2 > max_tastiness) max_tastiness = tastiness2;
+    if (tastiness3 > max_tastiness) max_tastiness = tastiness3;
+    if (tastiness4 > max_tastiness) max_tastiness = tastiness4;
+
+    printf("Maximum possible tastiness of the dish: %d\n", max_tastiness);
+
+    return 0;
+}
