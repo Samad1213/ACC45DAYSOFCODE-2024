@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int N, K, M;
+
+    printf("Enter the number of candies (N): ");
+    scanf("%d", &N);
+    printf("Enter the number of pockets in each bag (K): ");
+    scanf("%d", &K);
+    printf("Enter the maximum candies each pocket can hold (M): ");
+    scanf("%d", &M);
+
+    int capacity_per_bag = K * M;
+
+    int bags_needed = (N + capacity_per_bag) / capacity_per_bag;
+
+    printf("Minimum number of bags needed: %d\n", bags_needed);
+    
+    return 0;
+}
