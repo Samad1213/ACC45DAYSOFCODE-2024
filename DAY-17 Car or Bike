@@ -1,0 +1,20 @@
+#include <stdio.h>
+ int main(){
+     int X,Y;
+     
+     printf("enter time taken by BIKE(in minnutes):");
+     scanf("%d",&X);
+      printf("enter time taken by CAR(in minutes)");
+      scanf("%d",&Y);
+      
+      if(X>Y){
+          printf("CAR is Faster.\n");
+      }
+      else if(Y>X){
+          printf("BIKE is Fsater.\n");
+      }
+      else{
+          printf("Both take the same time\n");
+      }
+  return 0;
+ }
