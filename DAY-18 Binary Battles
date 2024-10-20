@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int N, A, B, total_time = 0;
+
+    printf("Enter the number of teams (N): ");
+    scanf("%d", &N);
+    printf("Enter the time for each round (A in minutes): ");
+    scanf("%d", &A);
+    printf("Enter the break time between rounds (B in minutes): ");
+    scanf("%d", &B);
+    
+    int rounds = 0;
+    int teams = N;
+
+    while (teams > 1) {
+
+        total_time += A;
+
+        if (teams / 2 > 1) {
+            total_time += B;
+        }
+
+        teams /= 2;
+        rounds++;
+    }
+
+    printf("The total time for the event is: %d minutes\n", total_time);
+    
+    return 0;
+}
