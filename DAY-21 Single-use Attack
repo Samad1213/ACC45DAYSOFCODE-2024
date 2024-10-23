@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int H, X, Y;
+
+    printf("Enter boss health (H): ");
+    scanf("%d", &H);
+    printf("Enter damage per attack (X): ");
+    scanf("%d", &X);
+    printf("Enter special attack damage (Y): ");
+    scanf("%d", &Y);
+
+    int min_attacks = 0;
+
+    
+    if (Y >= H) {
+        min_attacks = 1; 
+    } else {
+       
+        H -= Y;
+        min_attacks = 1;
+
+    
+        if (H > 0) {
+            
+            min_attacks += (H + X - 1) / X; 
+        }
+    }
+
+    printf("Minimum attacks needed: %d\n", min_attacks);
+    return 0;
+}
