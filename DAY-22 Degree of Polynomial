@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int N; 
+    printf("Enter the number of terms in the polynomial: ");
+    scanf("%d", &N);
+    
+    int coefficients[N];
+    
+    printf("Enter the coefficients of the polynomial:\n");
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &coefficients[i]);
+    }
+
+    int degree = -1;
+    
+    for (int i = 0; i < N; i++) {
+        if (coefficients[i] != 0) {
+            degree = i; 
+        }
+    }
+
+    printf("The degree of the polynomial is: %d\n", degree);
+    
+    return 0;
+}
