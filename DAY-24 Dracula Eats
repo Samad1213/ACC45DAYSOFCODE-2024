@@ -1,0 +1,12 @@
+def count_tuesdays(N):
+    count = 0
+    for i in range(N):
+
+        if i % 7 == 1:
+            count += 1
+    return count
+
+N = int(input("Enter the number of spooky days left until Halloween: "))
+tuesday_count = count_tuesdays(N)
+
+print(f"Dracula can enjoy his favourite menu {tuesday_count} time(s) before Halloween.")
