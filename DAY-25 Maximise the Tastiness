@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+    
+    int a, b, c, d;
+    
+    printf("Enter tastiness of A: ");
+    scanf("%d", &a);
+    printf("Enter tastiness of B: ");
+    scanf("%d", &b);
+    printf("Enter tastiness of C: ");
+    scanf("%d", &c);
+    printf("Enter tastiness of D: ");
+    scanf("%d", &d);
+
+    int maxTastiness = 0;
+    maxTastiness = (a > b ? a : b) + (c > d ? c : d);
+
+    printf("Maximum possible tastiness of the dish: %d\n", maxTastiness);
+
+    return 0;
+}
