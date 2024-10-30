@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int A, B, K;
+
+    printf("Enter Chef's coordinate A: ");
+    scanf("%d", &A);
+    printf("Enter Chefina's coordinate B: ");
+    scanf("%d", &B);
+    printf("Enter maximum step size K: ");
+    scanf("%d", &K);
+
+    int distance = abs(B - A);
+
+    int min_steps = (distance + K - 1) / K;  
+    
+    printf("Minimum number of steps required: %d\n", min_steps);
+
+    return 0;
+}
