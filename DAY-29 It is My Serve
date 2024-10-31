@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int aliceScore, bobScore;
+    
+    printf("Enter Alice's score: ");
+    scanf("%d", &aliceScore);
+    printf("Enter Bob's score: ");
+    scanf("%d", &bobScore);
+    
+    int totalPoints = aliceScore + bobScore;
+
+    int serves = totalPoints / 2; 
+    int currentServer = serves % 2; 
+
+    if (currentServer == 0) {
+        printf("It's Alice's serve.\n");
+    } else {
+        printf("It's Bob's serve.\n");
+    }
+
+    return 0;
+}
