@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+   
+    printf("Enter the number of players (N): ");
+    scanf("%d", &N);
+    
+    if (N >= 2) {
+        int choices = N * (N - 1);
+        printf("The number of different choices for captain and vice-captain is: %d\n", choices);
+    } else {
+        printf("There should be at least 2 players to choose a captain and a vice-captain.\n");
+    }
+    
+    return 0;
+}
