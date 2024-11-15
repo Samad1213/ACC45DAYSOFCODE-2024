@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int N, A, B;
+
+    scanf("%d %d %d", &N, &A, &B);
+    
+    int totalDuration = 0;
+    
+    for (int i = 1; i <= N; i++) {
+        if (i % 2 == 0) {
+
+            totalDuration += A;
+        } else {
+            totalDuration += B;
+        }
+    }
+    
+    printf("%d\n", totalDuration);
+    
+    return 0;
+}
