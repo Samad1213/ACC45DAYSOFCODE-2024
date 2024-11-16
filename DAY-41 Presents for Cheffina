@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+    
+    int num_groups = N / 5;
+   
+    int remaining = N % 5;
+
+    int coins = 4 * num_groups + remaining;
+    
+    printf("%d\n", coins);
+    
+    return 0;
+}
