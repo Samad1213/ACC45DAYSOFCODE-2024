@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int X, Y, R;
+    
+    scanf("%d %d %d", &X, &Y, &R);
+
+    int extraSticks = R / 30;
+
+    int totalSticks = X + extraSticks;
+
+    int plates = totalSticks / Y;
+
+    if (totalSticks % Y > 0) {
+        plates++;
+    }
+
+    printf("%d\n", plates);
+
+    return 0;
+}
