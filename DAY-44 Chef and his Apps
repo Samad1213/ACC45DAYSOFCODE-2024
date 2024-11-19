@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int S, X, Y, Z;
+    scanf("%d %d %d %d", &S, &X, &Y, &Z);
+    int free_space = S - (X + Y);
+    if (free_space >= Z) {
+        printf("0\n");
+    } else {
+        int needed_space = Z - free_space;
+        if (X < Y) {
+            int temp = X;
+            X = Y;
+            Y = temp;
+        }
+        if (needed_space <= X) {
+            printf("1\n");
+        } else if (needed_space <= X + Y) {
+            printf("2\n");
+        }
+    }
+    return 0;
+}
